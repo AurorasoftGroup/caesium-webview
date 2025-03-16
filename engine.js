@@ -13,7 +13,7 @@ function loadPage() {
         }
         
         // This is our WebViewer engine, which is a CORS proxy so many websites can load.
-        frame.src = "https://webviewer.ourjupitergroup.workers.dev/?src=" + encodeURIComponent(input);
+        frame.src = "https://webviewer.ourjupitergroup.workers.dev/?url=" + encodeURIComponent(input);
     } else {
         // Other queries load in a CSE.
         frame.src = "https://barclaygo.pages.dev/results?q=" + encodeURIComponent(input) + "#gsc.tab=0&gsc.q=" +encodeURIComponent(input) + "&gsc.page=1";
