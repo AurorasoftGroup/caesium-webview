@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesium WebViewer</title>
+    <link rel="shortcut icon" href="appicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://universalwebapps.pages.dev/api4/sevolt/modern.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+    <div id="browser-container">
+        <div id="url-bar">
+            <input type="text" id="urlInput" class="form-control" placeholder="Enter URL or search query..." onkeypress="handleKeyPress(event)">
+            <button class="btn btn-primary" onclick="loadPage()">Go</button>
+        </div>
+        <iframe id="browserFrame" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation" src="https://barclaywebtech.pages.dev/search"></iframe>
+    </div>
+    <script src="engine.js"></script>
+</body>
+</html>
