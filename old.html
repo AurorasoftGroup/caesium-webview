@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesium WebViewer</title>
+    <link rel="shortcut icon" href="caesium-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://universalwebapps.pages.dev/api4/sevolt/modern.css">
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #browser-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #url-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: #f4f4f4;
+            padding: 10px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        iframe {
+            flex-grow: 1;
+            width: 100%;
+            border: none;
+        }
+
+        .form-control {
+            flex: 1 !important;
+            margin: 10px 0 10px 0 !important;
+            min-width: 80% !important;
+        }
+
+        .btn {
+            margin: 10px 0 10px 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            #url-bar {
+                flex-direction: column;
+                gap: 0px;
+            }
+
+            #url-bar input {
+                width: 90%;
+            }
+
+            button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            #url-bar {
+                flex-direction: row;
+            }
+
+            #url-bar input {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="browser-container">
+        <div id="url-bar">
+            <input type="text" id="urlInput" class="form-control" placeholder="Enter URL or search query..." onkeypress="handleKeyPress(event)">
+            <button class="btn btn-primary" onclick="loadPage()">Go</button>
+        </div>
+        <iframe id="browserFrame" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation" src="https://barclaygo.pages.dev/"></iframe>
+    </div>
+    <script>
+        function loadPage() {
+            let input = document.getElementById("urlInput").value;
+            let frame = document.getElementById("browserFrame");
+
+            if (input.includes(".") && !input.includes(" ")) {
+                if (!input.startsWith("http")) {
+                    input = "https://" + input;
+                }
+
+                frame.src = "https://barclaycors.ourjupitergroup.workers.dev/?url=" + encodeURIComponent(input);
+            } else {
+                frame.src = "https://barclaygo.pages.dev/results?q=" + encodeURIComponent(input) + "#gsc.tab=0&gsc.q=" +encodeURIComponent(input) + "&gsc.page=1";
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                loadPage();
+            }
+        }
+    </script>
+</body>
+</html>
