@@ -5,8 +5,11 @@ function loadPage() {
 
     // Determins whether the text in the input is meant to be a query or a URL.
     if (input.includes(".") && !input.includes(" ")) {
-        if (!input.startsWith("http")) {
-            input = "https://" + input;
+        if (!input.startsWith("www.")) {
+            input = "www." + input;
+        }
+        if (input.startsWith("http")) {
+            input = '';
         }
         
         // This is our WebViewer engine, which is a CORS proxy so many websites can load.
