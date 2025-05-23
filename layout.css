@@ -1,30 +1,15 @@
-/* Our UI font, based on Ubuntu Sans. */
-@font-face {
-    font-family: 'Caesium';
-    src: url(./Caesium-Regular.ttf);
-}
-
-/* CSS Reset to apply our custom font to all Caesium UI elements. */
-* {
-    font-family: 'Caesium' !important;
-}
-
 body {
     text-align: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-
-/* The whole page itself. */
 #browser-container {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
-/* The container with the input and button. */
 #url-bar {
     display: flex;
     justify-content: center;
@@ -33,28 +18,38 @@ body {
     background: #f4f4f4;
     padding: 10px;
 }
-
+#logo {
+    height: 20px;
+    margin-right: 10px;
+}
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
 iframe {
     flex-grow: 1;
     width: 100%;
     border: none;
 }
-
-/* This is the URL/query input. */
 .form-control {
     flex: 1 !important;
     margin: 10px 0 10px 0 !important;
     min-width: 80% !important;
 }
-
-/* This is the "Go" button. */
 .btn {
     margin: 10px 0 10px 0 !important;
 }
 
-/* Changes the layout on tablets and phones. */
-/* Tablets */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     #url-bar {
         flex-direction: column;
         gap: 0px;
@@ -68,7 +63,6 @@ iframe {
     }
 }
 
-/* Phones */
 @media (min-width: 769px) {
     #url-bar {
         flex-direction: row;
