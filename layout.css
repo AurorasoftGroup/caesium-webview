@@ -1,4 +1,18 @@
+:root {
+    --cds-font: 'caesium-ui', system-ui, sans-serif;
+    --cds-blue-1: #007bff;
+    --cds-blue-2: #0056b3;
+    --cds-background: #f4f4f4;
+    --cds-border: #cccccc;
+    --cds-btn-text: #ffffff;
+}
+
+@font-face {
+    font-family: 'caesium-ui';
+    src: url(./CaesiumText-Regular.ttf);
+}
 body {
+    font-family: var(--cds-font);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -15,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background: #f4f4f4;
+    background: var(--cds-background);
     padding: 10px;
 }
 #logo {
@@ -23,32 +37,52 @@ body {
     margin-right: 10px;
 }
 button {
+    font-family: var(--cds-font);
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--cds-blue-1);
+    color: var(--cds-btn-text);
     border: none;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--cds-blue-2);
 }
 iframe {
     flex-grow: 1;
     width: 100%;
     border: none;
 }
-.form-control {
-    flex: 1 !important;
-    margin: 10px 0 10px 0 !important;
-    min-width: 80% !important;
+.url-input {
+    font-family: var(--cds-font);
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    outline: none;
+    transition: border-color 0.3s;
 }
-.btn {
-    margin: 10px 0 10px 0 !important;
+.url-input:focus {
+    border-color: var(--cds-blue-1);
 }
-
+.go-button {
+    font-family: var(--cds-font);
+    padding: 10px 20px;
+    background-color: var(--cds-blue-1);
+    color: var(--cds-btn-text);
+    font-size: 16px;
+    border: 1px solid var(--cds-blue-1);
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.go-button:hover {
+    background-color: var(--cds-blue-2);
+    border-color: var(--cds-blue-2);
+}
 @media (max-width: 768px) {
     #url-bar {
         flex-direction: column;
@@ -62,7 +96,6 @@ iframe {
         margin-top: 10px;
     }
 }
-
 @media (min-width: 769px) {
     #url-bar {
         flex-direction: row;

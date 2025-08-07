@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caesium</title>
+    <title>CaesiumOS</title>
     <link rel="manifest" href="app.webmanifest">
     <link rel="shortcut icon" href="assets/caesium-icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://universalwebapps.pages.dev/api4/sevolt/modern.css">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="layout.min.css">
 </head>
 <body>
     <div id="browser-container">
         <div id="url-bar">
             <img id="logo" src="assets/caesium-wordmark.svg" alt="Logo">
-            <input type="text" id="urlInput" class="form-control" placeholder="Enter URL or search query..." onkeypress="handleKeyPress(event)">
-            <button class="btn btn-primary" onclick="loadPage()">Go</button>
+            <input type="text" id="urlInput" class="url-input" placeholder="Enter URL or search query..." onkeypress="handleKeyPress(event)">
+            <button class="go-button" onclick="loadPage()">Go</button>
         </div>
         <iframe id="browserFrame"></iframe>
     </div>
-    <script src="engine.js"></script>
+    <script src="engine.min.js"></script>
 </body>
 </html>
