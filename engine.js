@@ -8,7 +8,7 @@ function loadPage() {
         }
         frame.src = "https://corsproxy.ourjupitergroup.workers.dev/?url=" + encodeURIComponent(input);
     } else {
-        frame.src = "https://caesiumwebview.pages.dev/search_engine#gsc.tab=0&gsc.q=" + encodeURIComponent(input) + "&gsc.sort=";
+        frame.src = "https://caesiumwebview.pages.dev/search_embedded#gsc.tab=0&gsc.q=" + encodeURIComponent(input) + "&gsc.sort=";
     }
 }
 
