@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaesiumOS</title>
-    <link rel="manifest" href="app.webmanifest">
-    <link rel="shortcut icon" href="assets/caesium-icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="layout.min.css">
+    <link rel="manifest" href="scripts/app.webmanifest">
+    <link rel="shortcut icon" href="assets/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/layout.min.css">
 </head>
 <body>
     <div id="browser-container">
         <div id="url-bar">
-            <img id="logo" src="assets/caesium-wordmark.svg" alt="Logo">
+            <img id="logo" src="assets/wordmark.svg" alt="Caesium Logo">
             <input type="text" id="urlInput" class="url-input" placeholder="Enter URL or search query..." onkeypress="handleKeyPress(event)">
             <button class="go-button" onclick="loadPage()">Go</button>
         </div>
         <iframe id="browserFrame"></iframe>
     </div>
-    <script src="engine.min.js"></script>
+    <script src="scripts/engine.min.js"></script>
+    <script src="scripts/console.js"></script>
 </body>
 </html>

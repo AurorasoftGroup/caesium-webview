@@ -1,0 +1,1 @@
+console.log("Copyright (c) 2025 WebTelegraph Group (https://webtelegraph.pages.dev/). All Rights Reserved.\nCaesium WebView v1.0 ALPHA.")

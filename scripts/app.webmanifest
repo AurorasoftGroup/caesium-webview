@@ -1,18 +1,18 @@
 {
     "short_name": "Caesium",
-    "name": "Caesium",
+    "name": "Caesium WebProxy",
     "icons": [
         {
-            "src": "assets/caesium-icon.svg",
+            "src": "assets/icon.svg",
             "type": "image/svg+xml",
             "sizes": "512x512"
         }
     ],
     "id": "/",
     "start_url": "/",
-    "background_color": "#ffffff",
+    "background_color": "#bebebe",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#0066ff",
+    "theme_color": "#000080",
     "description": "Browse the web somewhat freely using a website."
 }

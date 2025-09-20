@@ -1,15 +1,15 @@
 :root {
     --cds-font: 'caesium-ui', system-ui, sans-serif;
-    --cds-blue-1: #007bff;
-    --cds-blue-2: #0056b3;
-    --cds-background: #f4f4f4;
-    --cds-border: #cccccc;
+    --cds-blue-1: #000080;
+    --cds-blue-2: #000080;
+    --cds-background: #bebebe;
+    --cds-border: #000000;
     --cds-btn-text: #ffffff;
 }
 
 @font-face {
     font-family: 'caesium-ui';
-    src: url(./CaesiumText-Regular.ttf);
+    src: url(../assets/websys.ttf);
 }
 body {
     font-family: var(--cds-font);
@@ -60,7 +60,7 @@ iframe {
     flex: 1;
     padding: 10px 14px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cds-border);
     border-radius: 0px;
     outline: none;
     transition: border-color 0.3s;
