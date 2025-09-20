@@ -3,7 +3,7 @@
     "name": "Caesium WebProxy",
     "icons": [
         {
-            "src": "assets/icon.svg",
+            "src": "https://caesiumwebview.pages.dev/assets/icon.svg",
             "type": "image/svg+xml",
             "sizes": "512x512"
         }
