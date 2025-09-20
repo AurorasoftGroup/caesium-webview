@@ -6,9 +6,9 @@ function loadPage() {
         if (!input.startsWith("http")) {
             input = "https://" + input;
         }
-        frame.src = "https://corsproxy.ourjupitergroup.workers.dev/?url=" + encodeURIComponent(input);
+        frame.src = "https://strike.webstreamfonts.workers.dev/?url=" + encodeURIComponent(input);
     } else {
-        frame.src = "https://caesiumwebview.pages.dev/search_embedded#gsc.tab=0&gsc.q=" + encodeURIComponent(input) + "&gsc.sort=";
+        frame.src = "https://caesiumwebview.pages.dev/apps/search_embedded#gsc.tab=0&gsc.q=" + encodeURIComponent(input) + "&gsc.sort=";
     }
 }
 
